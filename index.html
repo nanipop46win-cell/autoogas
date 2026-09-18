@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รับพัฒนาระบบอัตโนมัติ Google Apps Script | Google Sheets, Drive, LINE & Telegram</title>
+    <!-- Compiled Tailwind CSS embedded for single-file production use -->
+    <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Kanit,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.-top-3\.5{top:-.875rem}.bottom-0{bottom:0}.left-0{left:0}.left-1\/2{left:50%}.right-0{right:0}.right-4{right:1rem}.top-0{top:0}.top-1\/4{top:25%}.top-4{top:1rem}.-z-10{z-index:-10}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-auto{margin-left:auto}.mr-1{margin-right:.25rem}.mr-2{margin-right:.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:.5rem}.h-2\.5{height:.625rem}.h-4{height:1rem}.h-9{height:2.25rem}.h-\[400px\]{height:400px}.h-\[500px\]{height:500px}.min-h-\[360px\]{min-height:360px}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-2\.5{width:.625rem}.w-3\/4{width:75%}.w-32{width:8rem}.w-5{width:1.25rem}.w-5\/6{width:83.333333%}.w-9{width:2.25rem}.w-\[400px\]{width:400px}.w-\[500px\]{width:500px}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}@keyframes spin{to{transform:rotate(1turn)}}.animate-spin{animation:spin 1s linear infinite}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-3\.5{gap:.875rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-3>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(.75rem*var(--tw-space-x-reverse));margin-left:calc(.75rem*(1 - var(--tw-space-x-reverse)))}.space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*(1 - var(--tw-space-x-reverse)))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[2\.5rem\]{border-radius:2.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.rounded-b-xl{border-bottom-right-radius:.75rem;border-bottom-left-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138/var(--tw-border-opacity,1))}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77/var(--tw-border-opacity,1))}.border-amber-300\/80{border-color:rgba(252,211,77,.8)}.border-amber-500{--tw-border-opacity:1;border-color:rgb(245 158 11/var(--tw-border-opacity,1))}.border-amber-500\/30{border-color:rgba(245,158,11,.3)}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208/var(--tw-border-opacity,1))}.border-purple-200{--tw-border-opacity:1;border-color:rgb(233 213 255/var(--tw-border-opacity,1))}.border-sky-200{--tw-border-opacity:1;border-color:rgb(186 230 253/var(--tw-border-opacity,1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.border-slate-200\/80{border-color:rgba(226,232,240,.8)}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105/var(--tw-border-opacity,1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85/var(--tw-border-opacity,1))}.border-slate-700\/80{border-color:rgba(51,65,85,.8)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59/var(--tw-border-opacity,1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.bg-amber-100\/90{background-color:hsla(48,96%,89%,.9)}.bg-amber-400\/15{background-color:rgba(251,191,36,.15)}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-amber-500\/20{background-color:rgba(245,158,11,.2)}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.bg-blue-400\/10{background-color:rgba(96,165,250,.1)}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255/var(--tw-bg-opacity,1))}.bg-sky-100{--tw-bg-opacity:1;background-color:rgb(224 242 254/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-100\/80{background-color:rgba(241,245,249,.8)}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.bg-slate-700\/80{background-color:rgba(51,65,85,.8)}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-slate-800\/80{background-color:rgba(30,41,59,.8)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-slate-900\/60{background-color:rgba(15,23,42,.6)}.bg-telegram{--tw-bg-opacity:1;background-color:rgb(34 158 217/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/70{background-color:hsla(0,0%,100%,.7)}.bg-white\/90{background-color:hsla(0,0%,100%,.9)}.bg-white\/95{background-color:hsla(0,0%,100%,.95)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-amber-500\/10{--tw-gradient-from:rgba(245,158,11,.1) var(--tw-gradient-from-position);--tw-gradient-to:rgba(245,158,11,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-slate-900{--tw-gradient-from:#0f172a var(--tw-gradient-from-position);--tw-gradient-to:rgba(15,23,42,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-amber-500\/5{--tw-gradient-to:rgba(245,158,11,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(245,158,11,.05) var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-amber-950\/60{--tw-gradient-to:rgba(69,26,3,.6) var(--tw-gradient-to-position)}.to-slate-50{--tw-gradient-to:#f8fafc var(--tw-gradient-to-position)}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-1{padding-bottom:.25rem}.pb-16{padding-bottom:4rem}.pb-2{padding-bottom:.5rem}.pb-20{padding-bottom:5rem}.pb-6{padding-bottom:1.5rem}.pt-2{padding-top:.5rem}.pt-28{padding-top:7rem}.pt-3{padding-top:.75rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.font-sans{font-family:Kanit,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-normal{line-height:1.5}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11/var(--tw-text-opacity,1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9/var(--tw-text-opacity,1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14/var(--tw-text-opacity,1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15/var(--tw-text-opacity,1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246/var(--tw-text-opacity,1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-cyan-300{--tw-text-opacity:1;color:rgb(103 232 249/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-emerald-400\/80{color:rgba(52,211,153,.8)}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105/var(--tw-text-opacity,1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70/var(--tw-text-opacity,1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59/var(--tw-text-opacity,1))}.text-line{--tw-text-opacity:1;color:rgb(0 195 0/var(--tw-text-opacity,1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234/var(--tw-text-opacity,1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168/var(--tw-text-opacity,1))}.text-sky-500{--tw-text-opacity:1;color:rgb(14 165 233/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.text-telegram{--tw-text-opacity:1;color:rgb(34 158 217/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.decoration-amber-400{text-decoration-color:#fbbf24}.decoration-2{text-decoration-thickness:2px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.accent-amber-500{accent-color:#f59e0b}.opacity-75{opacity:.75}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-amber-500\/20{--tw-shadow-color:rgba(245,158,11,.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-amber-500\/25{--tw-shadow-color:rgba(245,158,11,.25);--tw-shadow:var(--tw-shadow-colored)}.shadow-amber-500\/30{--tw-shadow-color:rgba(245,158,11,.3);--tw-shadow:var(--tw-shadow-colored)}.blur{--tw-blur:blur(8px)}.blur,.blur-3xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-3xl{--tw-blur:blur(64px)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-blur-lg{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px)}.backdrop-blur-xl,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.selection\:bg-amber-500 ::-moz-selection{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.selection\:bg-amber-500 ::selection{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.selection\:text-white ::-moz-selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:text-white ::selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:bg-amber-500::-moz-selection{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.selection\:bg-amber-500::selection{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.selection\:text-white::-moz-selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-amber-400:hover{--tw-border-opacity:1;border-color:rgb(251 191 36/var(--tw-border-opacity,1))}.hover\:bg-amber-400:hover{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.hover\:bg-slate-300:hover{--tw-bg-opacity:1;background-color:rgb(203 213 225/var(--tw-bg-opacity,1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.hover\:text-amber-600:hover{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.hover\:shadow-lg:hover,.hover\:shadow-md:hover{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.focus\:border-amber-500:focus{--tw-border-opacity:1;border-color:rgb(245 158 11/var(--tw-border-opacity,1))}.focus\:bg-white:focus{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-amber-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(245 158 11/var(--tw-ring-opacity,1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95}.active\:scale-95:active,.group[open] .group-open\:rotate-180{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group[open] .group-open\:rotate-180{--tw-rotate:180deg}.group:hover .group-hover\:rotate-12{--tw-rotate:12deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width:640px){.sm\:inline{display:inline}.sm\:h-20{height:5rem}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:gap-6{gap:1.5rem}.sm\:p-10{padding:2.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-20{padding-top:5rem;padding-bottom:5rem}.sm\:pt-36{padding-top:9rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:leading-none{line-height:1}}@media (min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:pb-0{padding-bottom:0}.md\:text-left{text-align:left}}@media (min-width:1024px){.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:text-6xl{font-size:3.75rem;line-height:1}}.\[\&_summary\:\:-webkit-details-marker\]\:hidden summary::-webkit-details-marker{display:none}</style>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Kanit -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #0f172a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .pulse-badge {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.03); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-500 selection:text-white pb-20 md:pb-0">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-200/80 shadow-sm transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold text-slate-900 tracking-wide flex items-center gap-2.5 group">
+                <span class="w-9 h-9 rounded-xl bg-amber-500 flex items-center justify-center text-white text-lg font-black shadow-md shadow-amber-500/30 group-hover:rotate-12 transition-transform duration-300">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+                <span class="font-extrabold text-base sm:text-xl whitespace-nowrap">ระบบอัตโนมัติ <span class="text-amber-500">เพื่อธุรกิจคุณ</span></span>
+            </a>
+            
+            <nav class="hidden lg:flex space-x-6 text-sm font-medium text-slate-700">
+                <a href="#calculator" class="hover:text-amber-600 transition flex items-center gap-1.5"><i class="fa-solid fa-calculator text-amber-500"></i>คำนวณคุ้มค่า</a>
+                <a href="#simulator" class="hover:text-amber-600 transition flex items-center gap-1.5"><i class="fa-solid fa-mobile-screen-button text-amber-500"></i>ทดลองการ์ดแชท</a>
+                <a href="#services" class="hover:text-amber-600 transition">บริการ</a>
+                <a href="#portfolio" class="hover:text-amber-600 transition">ตัวอย่างผลงาน</a>
+                <a href="#pricing" class="hover:text-amber-600 transition">ราคา/แพ็กเกจ</a>
+                <a href="#faq" class="hover:text-amber-600 transition">FAQ</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="#contact" class="px-5 py-2.5 text-sm font-bold rounded-xl bg-amber-500 text-slate-900 hover:bg-amber-400 active:scale-95 transition duration-200 shadow-md shadow-amber-500/20 flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>ปรึกษา / ประเมินฟรี</span>
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden text-slate-700 hover:text-slate-900 p-2 rounded-lg bg-slate-100 hover:bg-slate-200 transition">
+                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-lg border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl transition-all duration-300">
+            <a href="#calculator" class="block text-slate-700 hover:text-amber-600 py-2 font-medium flex items-center gap-2"><i class="fa-solid fa-calculator text-amber-500 w-5"></i> คำนวณความคุ้มค่า (ROI)</a>
+            <a href="#simulator" class="block text-slate-700 hover:text-amber-600 py-2 font-medium flex items-center gap-2"><i class="fa-solid fa-mobile-screen-button text-amber-500 w-5"></i> ตัวจำลองการ์ด LINE/Telegram</a>
+            <a href="#services" class="block text-slate-700 hover:text-amber-600 py-2 font-medium flex items-center gap-2"><i class="fa-solid fa-layer-group text-amber-500 w-5"></i> บริการของเรา</a>
+            <a href="#portfolio" class="block text-slate-700 hover:text-amber-600 py-2 font-medium flex items-center gap-2"><i class="fa-solid fa-images text-amber-500 w-5"></i> ตัวอย่างผลงาน</a>
+            <a href="#preparation" class="block text-slate-700 hover:text-amber-600 py-2 font-medium flex items-center gap-2"><i class="fa-solid fa-list-check text-amber-500 w-5"></i> สิ่งที่ต้องเตรียม</a>
+            <a href="#process" class="block text-slate-700 hover:text-amber-600 py-2 font-medium flex items-center gap-2"><i class="fa-solid fa-diagram-project text-amber-500 w-5"></i> ขั้นตอนการทำงาน</a>
+            <a href="#pricing" class="block text-slate-700 hover:text-amber-600 py-2 font-medium flex items-center gap-2"><i class="fa-solid fa-tags text-amber-500 w-5"></i> ราคา & แพ็กเกจ</a>
+            <a href="#faq" class="block text-slate-700 hover:text-amber-600 py-2 font-medium flex items-center gap-2"><i class="fa-solid fa-circle-question text-amber-500 w-5"></i> คำถามที่พบบ่อย (FAQ)</a>
+            <a href="#contact" class="block text-center w-full py-3 mt-3 font-bold rounded-xl bg-amber-500 text-slate-900 shadow-md">
+                <i class="fa-solid fa-paper-plane mr-2"></i> ปรึกษา / ส่งโจทย์งาน
+            </a>
+        </div>
+    </header>
+
+    <section class="pt-28 sm:pt-36 pb-16 px-4 sm:px-6 max-w-7xl mx-auto text-center relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -z-10 flex items-center justify-center pointer-events-none">
+            <div class="w-[500px] h-[500px] bg-amber-400/15 rounded-full blur-3xl"></div>
+            <div class="w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100/90 border border-amber-300/80 text-amber-900 text-xs sm:text-sm font-semibold mb-6 shadow-sm pulse-badge">
+            <i class="fa-solid fa-triangle-exclamation text-amber-600"></i>
+            <span>เบื่อไหม? กับการต้องคอยก๊อปปี้ข้อมูล และคอยคีย์งานซ้ำซ้อนทุกวัน</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight sm:leading-none mb-6">
+            เปลี่ยนงานมืออันแสนเหน็ดเหนื่อย <br class="hidden sm:inline"/>
+            เป็นระบบอัตโนมัติด้วย <span class="gradient-text">Google Apps Script</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed mb-8">
+            สร้าง workflow อัตโนมัติเชื่อมต่อ <strong class="text-slate-900">Google Sheets, Drive, LINE และ Telegram</strong> แบบ 24/7 ทำงานแทนคุณ 100% โดย <span class="text-amber-700 font-semibold underline decoration-amber-400 decoration-2">ไม่มีค่าบริการรายเดือน</span>
+        </p>
+
+        <!-- Feature Highlight Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10 text-left">
+            <div class="bg-white/90 backdrop-blur p-4 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-600 shrink-0 text-lg">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold text-slate-900">แจ้งเตือนทันที ไม่ตกหล่น</h2>
+                    <p class="text-[11px] text-slate-500 leading-normal mt-0.5">ส่ง Flex Message เข้า LINE/Telegram อัตโนมัติเมื่อมีรายการหรือออเดอร์ใหม่</p>
+                </div>
+            </div>
+            <div class="bg-white/90 backdrop-blur p-4 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0 text-lg">
+                    <i class="fa-solid fa-folder-closed"></i>
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold text-slate-900">จัดไฟล์เป็นระเบียบบน Drive</h2>
+                    <p class="text-[11px] text-slate-500 leading-normal mt-0.5">ดึงรูป/สลิป/เอกสารจากแชทไปจัดเก็บลงโฟลเดอร์ Drive พร้อมแนบ Link ลง Sheet</p>
+                </div>
+            </div>
+            <div class="bg-white/90 backdrop-blur p-4 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-300 flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 text-lg">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                </div>
+                <div>
+                    <h2 class="text-xs font-bold text-slate-900">จ่ายครั้งเดียว ไม่มีรายเดือน</h2>
+                    <p class="text-[11px] text-slate-500 leading-normal mt-0.5">รันบนบัญชี Google Workspace ของคุณเอง ปลอดภัยและประหยัดงบสุดๆ</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+            <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-amber-500 text-slate-900 font-bold hover:bg-amber-400 active:scale-95 transition shadow-lg shadow-amber-500/25 text-base flex items-center justify-center gap-2">
+                <i class="fa-solid fa-rocket"></i>
+                <span>ปรึกษาโจทย์งาน & ประเมินระบบฟรี</span>
+            </a>
+            <a href="#simulator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-slate-800 text-white font-semibold hover:bg-slate-800 active:scale-95 transition shadow-sm text-base flex items-center justify-center gap-2">
+                <i class="fa-solid fa-vial"></i>
+                <span>ลองกดจำลองการ์ดแจ้งเตือน</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="py-8 border-y border-slate-200/80 bg-white/70 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">เชื่อมต่อแพลตฟอร์มยอดนิยมได้ไร้รอยต่อ</p>
+            <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-6">
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 shadow-xs hover:border-amber-400 transition">
+                    <i class="fa-solid fa-file-excel text-emerald-600 text-lg"></i> Google Sheets
+                </span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 shadow-xs hover:border-amber-400 transition">
+                    <i class="fa-brands fa-google-drive text-blue-500 text-lg"></i> Google Drive
+                </span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 shadow-xs hover:border-amber-400 transition">
+                    <i class="fa-solid fa-code text-amber-500 text-lg"></i> Google Apps Script
+                </span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 shadow-xs hover:border-amber-400 transition">
+                    <i class="fa-comment text-line text-lg"></i> LINE Messaging / Flex API
+                </span>
+                <span class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 shadow-xs hover:border-amber-400 transition">
+                    <i class="fa-paper-plane text-telegram text-lg"></i> Telegram Bot API
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="py-16 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">
+                    <i class="fa-solid fa-calculator mr-1"></i> Interactive ROI Calculator
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">คำนวณเวลาและค่าใช้จ่ายที่ระบบช่วยประหยัดให้คุณ</h2>
+                <p class="text-slate-400 text-sm">ลองปรับตัวเลขงานประจำวันเพื่อดูว่าการย้ายมาใช้ Google Apps Script จะคืนทุนไวขนาดไหน</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-800/80 border border-slate-700/80 p-6 sm:p-10 rounded-3xl backdrop-blur-xl shadow-2xl">
+                <!-- Controls -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs sm:text-sm font-semibold text-slate-200">เวลาที่เสียไปกับงานก็อปปี้/คีย์ข้อมูลซ้ำๆ (ชั่วโมง/วัน):</label>
+                            <span id="hours-val" class="text-amber-400 font-bold text-lg">2 ชั่วโมง</span>
+                        </div>
+                        <input type="range" id="hours-slider" min="0.5" max="8" step="0.5" value="2" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs sm:text-sm font-semibold text-slate-200">จำนวนพนักงานที่ทำหน้าที่นี้ (คน):</label>
+                            <span id="staff-val" class="text-amber-400 font-bold text-lg">2 คน</span>
+                        </div>
+                        <input type="range" id="staff-slider" min="1" max="10" step="1" value="2" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs sm:text-sm font-semibold text-slate-200">อัตราค่าจ้างเฉลี่ย (บาท/ชั่วโมง/คน):</label>
+                            <span id="wage-val" class="text-amber-400 font-bold text-lg">100 บาท</span>
+                        </div>
+                        <input type="range" id="wage-slider" min="50" max="300" step="10" value="100" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                    </div>
+                </div>
+
+                <!-- Calculation Output Dashboard -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-amber-950/60 p-6 rounded-2xl border border-amber-500/30 text-center space-y-6 shadow-xl">
+                    <div>
+                        <span class="text-xs text-slate-400 block uppercase font-bold tracking-wider">ประหยัดเวลาการทำงานได้รวม</span>
+                        <div class="text-3xl sm:text-4xl font-black text-amber-400 mt-1" id="saved-hours">88 ชั่วโมง/เดือน</div>
+                        <span class="text-[11px] text-slate-400">เอาเวลาไปโฟกัสงานขายหรือพัฒนาร้านได้มากขึ้น!</span>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800">
+                        <span class="text-xs text-slate-400 block uppercase font-bold tracking-wider">ประหยัดต้นทุนค่าแรงได้ถึง</span>
+                        <div class="text-3xl sm:text-4xl font-black text-emerald-400 mt-1" id="saved-money">฿8,800 /เดือน</div>
+                        <span class="text-[11px] text-emerald-400/80 font-medium">คุ้มค่า พัฒนาระบบครั้งเดียวใช้ได้ตลอดไป</span>
+                    </div>
+
+                    <a href="#pricing" class="inline-block w-full py-3 rounded-xl bg-amber-500 text-slate-900 font-bold text-xs uppercase tracking-wider hover:bg-amber-400 transition shadow-md">
+                        ดูแพ็กเกจราคาพัฒนาระบบ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="simulator" class="py-16 sm:py-20 bg-slate-100/80 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 border border-amber-300 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+                    <i class="fa-solid fa-gamepad mr-1"></i> Interactive Card Simulator
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-3">ทดลองเปลี่ยนข้อมูล เพื่อดูตัวอย่างการ์ดแจ้งเตือนจริง</h2>
+                <p class="text-slate-600 text-sm">ลองพิมพ์ข้อมูลลงในฟอร์มด้านซ้าย แล้วดูการ์ด LINE Flex Message & Telegram แสดงผลแบบเรียลไทม์ทางขวา</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Input Controls -->
+                <div class="lg:col-span-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <h3 class="text-base font-bold text-slate-900 pb-2 border-b border-slate-100 flex items-center justify-between">
+                        <span>⚙️ ป้อนข้อมูลจำลอง</span>
+                        <span class="text-xs font-normal text-amber-600">อัปเดตทันที</span>
+                    </h3>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">ชื่อลูกค้า / รายการ</label>
+                        <input type="text" id="sim-customer" value="คุณสมชาย ใจดี" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-amber-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">ยอดเงินชำระ (บาท)</label>
+                        <input type="text" id="sim-amount" value="1,850" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-amber-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">สถานะรายการ</label>
+                        <select id="sim-status" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-amber-500">
+                            <option value="ชำระเงินเรียบร้อยแล้ว">🟢 ชำระเงินเรียบร้อยแล้ว</option>
+                            <option value="รอตรวจสอบสลิป">🟡 รอตรวจสอบสลิป</option>
+                            <option value="จัดส่งสินค้าแล้ว">📦 จัดส่งสินค้าแล้ว</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">หมายเหตุ / เลขพัสดุ</label>
+                        <input type="text" id="sim-note" value="TH123456789 (ส่งด่วน Kerry)" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-amber-500">
+                    </div>
+
+                    <div class="pt-2">
+                        <span class="text-[11px] text-slate-400 block mb-2 font-medium">สลับแพลตฟอร์มการแจ้งเตือน:</span>
+                        <div class="flex gap-2">
+                            <button id="toggle-line-btn" class="flex-1 py-2 px-3 rounded-xl bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fa-comment"></i> LINE Flex
+                            </button>
+                            <button id="toggle-tg-btn" class="flex-1 py-2 px-3 rounded-xl bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-slate-300 transition">
+                                <i class="fa-paper-plane text-telegram"></i> Telegram
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Preview Phone Mockup -->
+                <div class="lg:col-span-7 flex justify-center">
+                    <div class="w-full max-w-md bg-slate-900 p-4 rounded-[2.5rem] shadow-2xl border-4 border-slate-800 relative">
+                        <!-- Phone Header Notch -->
+                        <div class="w-32 h-4 bg-slate-800 rounded-b-xl mx-auto mb-3"></div>
+                        
+                        <!-- Screen Container -->
+                        <div id="sim-screen" class="bg-slate-800 rounded-2xl p-4 min-h-[360px] font-sans text-xs transition-all duration-300">
+                            
+                            <!-- LINE Flex View -->
+                            <div id="line-view" class="space-y-3">
+                                <div class="flex items-center gap-2 text-emerald-400 font-bold pb-2 border-b border-slate-700 text-xs">
+                                    <i class="fa-comment"></i> LINE Official Account Notice
+                                </div>
+                                <div class="bg-white rounded-2xl p-4 text-slate-800 shadow-md border border-slate-100">
+                                    <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
+                                        <span class="text-amber-600 font-bold text-xs flex items-center gap-1">
+                                            <i class="fa-solid fa-bag-shopping"></i> แจ้งเตือนออเดอร์ใหม่!
+                                        </span>
+                                        <span class="text-[10px] text-slate-400" id="preview-time">10:42 น.</span>
+                                    </div>
+                                    <div class="space-y-2 text-xs">
+                                        <div class="flex justify-between">
+                                            <span class="text-slate-400">ลูกค้า:</span>
+                                            <span class="font-bold text-slate-800" id="preview-line-customer">คุณสมชาย ใจดี</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-slate-400">ยอดชำระ:</span>
+                                            <span class="font-black text-emerald-600 text-sm" id="preview-line-amount">฿1,850</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-slate-400">สถานะ:</span>
+                                            <span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-md text-[10px] font-bold" id="preview-line-status">ชำระเงินเรียบร้อยแล้ว</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-slate-400">ข้อมูลเพิ่มเติม:</span>
+                                            <span class="text-slate-700 font-medium" id="preview-line-note">TH123456789 (ส่งด่วน)</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 pt-3 border-t border-slate-100 text-center">
+                                        <a href="#contact" class="inline-block w-full py-2 bg-amber-500 text-slate-900 font-bold rounded-lg text-xs hover:bg-amber-400 transition">
+                                            🔍 เปิดดูข้อมูลใน Google Sheet
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Telegram View -->
+                            <div id="tg-view" class="space-y-3 hidden">
+                                <div class="flex items-center gap-2 text-telegram font-bold pb-2 border-b border-slate-700 text-xs">
+                                    <i class="fa-paper-plane"></i> Telegram Bot Notification
+                                </div>
+                                <div class="bg-slate-700/80 rounded-xl p-4 text-white shadow-md border border-slate-600 font-mono text-xs space-y-2">
+                                    <p class="text-amber-400 font-bold">🤖 [GAS AUTOMATION BOT]</p>
+                                    <p class="text-slate-300">📌 <strong class="text-white">รายการอัปเดตใหม่</strong></p>
+                                    <p>------------------------</p>
+                                    <p>👤 <strong class="text-slate-300">ชื่อ:</strong> <span id="preview-tg-customer" class="text-emerald-300">คุณสมชาย ใจดี</span></p>
+                                    <p>💰 <strong class="text-slate-300">ยอด:</strong> <span id="preview-tg-amount" class="text-amber-300">฿1,850</span></p>
+                                    <p>⚡ <strong class="text-slate-300">สถานะ:</strong> <span id="preview-tg-status" class="text-cyan-300">ชำระเงินเรียบร้อยแล้ว</span></p>
+                                    <p>📝 <strong class="text-slate-300">หมายเหตุ:</strong> <span id="preview-tg-note">TH123456789</span></p>
+                                    <p>------------------------</p>
+                                    <p class="text-[10px] text-slate-400">💾 บันทึกลง Google Drive & Sheet เรียบร้อยแล้ว</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">Our Core Services</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">บริการที่เราเชี่ยวชาญ</h2>
+                <p class="text-slate-600 text-sm max-w-2xl mx-auto">เขียนโค้ด Google Apps Script ตรงตามความต้องการ 100% ตอบโจทย์ทุกขั้นตอนของธุรกิจ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-100 border border-emerald-200 rounded-2xl flex items-center justify-center text-emerald-600 mb-6 text-2xl">
+                            <i class="fa-comment"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Google Sheet + LINE Integration</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                            เชื่อมต่อ Google Sheets กับ LINE Notify หรือ Messaging API ส่งการ์ด Flex Message สวยงาม แจ้งเตือนยอดขายหรือตามงานค้างชำระอัตโนมัติ
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> แจ้งเตือนยอดขาย / ฟอร์มสั่งซื้อ</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-500"></i> การ์ด Flex Message กดโต้ตอบได้</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-sky-100 border border-sky-200 rounded-2xl flex items-center justify-center text-telegram mb-6 text-2xl">
+                            <i class="fa-paper-plane"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Google Sheet + Telegram Bot</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                            สร้าง บอท Telegram ค้นหาและคีย์ข้อมูลเข้า Sheet สั่งคำสั่งผ่านแชทเพื่อดึงรายงาน ค้นหารายชื่อ หรือตรวจสอบสถานะสต็อกสินค้าได้ทันที
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500"></i> บันทึกข้อมูลและสั่งงานผ่านคำสั่งแชท</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-500"></i> ส่งรายงานพร้อมไฟล์ PDF หรือรูปภาพ</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white border border-slate-200 p-8 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 border border-amber-200 rounded-2xl flex items-center justify-center text-amber-600 mb-6 text-2xl">
+                            <i class="fa-brands fa-google-drive"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Google Drive Auto Management</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                            จัดเก็บไฟล์ เอกสาร รูปภาพสลิปจากแชท ย้ายลง Google Drive แยกโฟลเดอร์ตามวันที่หรือลูกค้าอัตโนมัติ พร้อมคืนค่า Direct URL
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> สร้างโครงสร้าง Folder ปี/เดือน/ลูกค้า</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> สร้างใบเสร็จ/เอกสาร PDF อัตโนมัติ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">Portfolio & Examples</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">🖼️ ตัวอย่างผลงาน & รูปแบบระบบที่เคยพัฒนา</h2>
+                <p class="text-slate-600 text-sm max-w-2xl mx-auto">
+                    ตัวอย่างระบบที่นำไปใช้งานจริง ช่วยประหยัดเวลาและลดความผิดพลาดให้หลากหลายธุรกิจ
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Portfolio Card 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-full text-xs font-bold">LINE Flex Message</span>
+                            <span class="text-xs text-slate-400 font-medium">ระบบแจ้งเตือนออเดอร์</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">1. แจ้งเตือนยอดขาย & ใบสั่งซื้อเข้ากลุ่ม LINE</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            เมื่อมีลูกค้ากรอกแบบฟอร์มหรือคีย์ข้อมูลใหม่ใน Google Sheets ระบบจะส่งการ์ด Flex Message ตกแต่งสวยงามเข้ากลุ่ม LINE ของทีมงานทันที
+                        </p>
+                        <div class="bg-slate-900 p-4 rounded-2xl font-mono text-xs text-slate-300 border border-slate-800">
+                            <div class="bg-white text-slate-800 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                <p class="text-amber-600 font-bold border-b border-slate-100 pb-1 mb-2">🛍️ มีออเดอร์ใหม่เข้ามา!</p>
+                                <p class="text-[11px]"><span class="text-slate-400">ลูกค้า:</span> คุณสมชาย ใจดี</p>
+                                <p class="text-[11px]"><span class="text-slate-400">ยอดชำระ:</span> ฿1,500 บาท</p>
+                                <p class="text-[11px]"><span class="text-slate-400">สถานะ:</span> <span class="bg-emerald-100 text-emerald-900 px-1.5 py-0.5 rounded text-[10px] font-bold">ชำระเงินแล้ว</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 2 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-sky-100 text-telegram border border-sky-200 rounded-full text-xs font-bold">Telegram Bot</span>
+                            <span class="text-xs text-slate-400 font-medium">ระบบโต้ตอบ 2 ทาง</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">2. Telegram Bot ค้นหาคะแนนสะสม & สต็อก</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            พิมพ์ค้นหาด้วยรหัสสมาชิกหรือเบอร์โทร บอทจะทำการดึงข้อมูลจาก Google Sheets ออกมาแสดงผลตอบกลับในแชททันที
+                        </p>
+                        <div class="bg-slate-900 p-4 rounded-2xl font-mono text-xs text-slate-300 border border-slate-800 space-y-2">
+                            <div class="bg-amber-500 text-slate-900 font-bold p-2 rounded-lg text-right text-[11px] w-3/4 ml-auto">
+                                /check 0812345678
+                            </div>
+                            <div class="bg-slate-800 text-slate-200 p-3 rounded-lg border border-slate-700 text-[11px] w-5/6">
+                                🤖 <strong class="text-amber-400">พบข้อมูลสมาชิก:</strong><br/>
+                                • ชื่อ: คุณกิตติศักดิ์<br/>
+                                • คะแนนสะสม: 450 คะแนน<br/>
+                                • สถานะ: VIP Member
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 3 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 border border-purple-200 rounded-full text-xs font-bold">Time Trigger</span>
+                            <span class="text-xs text-slate-400 font-medium">รายงานอัตโนมัติ</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">3. สรุปรายงานยามเช้า & แจ้งงานใกล้หมดอายุ</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            ตั้งเวลาอัตโนมัติ คัดกรองข้อมูลใน Google Sheets ทุกเช้าเวลา 08:00 น. แล้วส่งสรุปรายการสัญญาหรือโดเมนที่ใกล้หมดอายุเข้าแชท
+                        </p>
+                        <div class="bg-slate-900 p-4 rounded-2xl font-mono text-xs text-slate-300 border border-slate-800">
+                            <div class="bg-white text-slate-800 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                <p class="text-purple-600 font-bold border-b border-slate-100 pb-1 mb-1">⏰ สรุปงานประจำวัน (08:00)</p>
+                                <p class="text-[11px]">📊 รายการทั้งหมด: 12 รายการ</p>
+                                <p class="text-[11px] text-amber-600 font-bold">⚠️ สัญญาหมดอายุภายใน 3 วัน: 2 รายการ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 4 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 border border-amber-200 rounded-full text-xs font-bold">Drive Automation</span>
+                            <span class="text-xs text-slate-400 font-medium">จัดเก็บไฟล์</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">4. ย้ายและจัดเก็บไฟล์เข้า Drive + PDF Auto Generation</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            ดึงไฟล์รูป/ใบเสร็จจากแชทสร้างเป็นโฟลเดอร์แยกตามปี/เดือน/ลูกค้าบน Google Drive อัตโนมัติ พร้อมส่งออก PDF Direct Link
+                        </p>
+                        <div class="bg-slate-900 p-4 rounded-2xl font-mono text-xs text-slate-300 border border-slate-800">
+                            <div class="bg-white text-slate-800 p-3 rounded-xl border border-slate-200 shadow-sm">
+                                <p class="text-slate-900 font-bold border-b border-slate-100 pb-1 mb-1">📁 Drive Structure Status</p>
+                                <p class="text-[11px]">📂 Google Drive / Files_2026 / 09_Sep /</p>
+                                <p class="text-[11px] text-emerald-600 font-bold">📄 Receipt_Order_1002.pdf (Saved!)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preparation" class="py-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">Preparation Checklist</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-3">📋 สิ่งที่ลูกค้าต้องเตรียมให้ก่อนเริ่มพัฒนาระบบ</h2>
+                <p class="text-slate-600 text-sm">เตรียมข้อมูล 3 ข้อนี้ไว้ล่วงหน้า จะช่วยให้งานพัฒนาเสร็จไวขึ้นครับ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 bg-slate-900 text-amber-400 rounded-xl flex items-center justify-center font-extrabold mb-4 text-base">
+                        1
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Google Account</h3>
+                    <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+                        <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> บัญชี Gmail หรือ Google Workspace</li>
+                        <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> สิทธิ์เข้าถึง Google Sheets / Drive ที่ใช้ประมวลผล</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 bg-slate-900 text-amber-400 rounded-xl flex items-center justify-center font-extrabold mb-4 text-base">
+                        2
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">Token / API Key</h3>
+                    <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+                        <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> LINE Notify Token หรือ บัญชี LINE Official Account</li>
+                        <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> Telegram Bot Token (กรณีใช้ บอท Telegram)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <div class="w-10 h-10 bg-slate-900 text-amber-400 rounded-xl flex items-center justify-center font-extrabold mb-4 text-base">
+                        3
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">ไฟล์ตัวอย่าง & โจทย์งาน</h3>
+                    <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+                        <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> ตารางตัวอย่างคอลัมน์ใน Sheet</li>
+                        <li class="flex items-start gap-1.5"><i class="fa-solid fa-check text-amber-500 mt-0.5"></i> รูปแบบข้อความ/ Flex Message ที่ต้องการส่ง</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">Workflow & Guarantees</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">ขั้นตอนการทำงาน & เงื่อนไขชำระเงิน</h2>
+                <p class="text-slate-600 text-sm">รับงานพัฒนาสคริปต์ด้วยความใส่ใจและประณีต เพื่อความเสถียรสูงสุด</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl relative">
+                    <span class="text-3xl font-extrabold text-slate-300 absolute top-4 right-4">01</span>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">1. บรีฟงาน & มัดจำ 40%</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">ตกลงขอบเขตงานและแพ็กเกจ ชำระมัดจำเริ่มต้น 40% เพื่อเริ่มคิวพัฒนาระบบ</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl relative">
+                    <span class="text-3xl font-extrabold text-slate-300 absolute top-4 right-4">02</span>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">2. พัฒนาระบบ & ส่งงาน</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">เขียนสคริปต์ตามรอบระยะเวลาแพ็กเกจ และส่งชิ้นงานครั้งแรกให้ลูกค้าทดสอบ</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl relative">
+                    <span class="text-3xl font-extrabold text-slate-300 absolute top-4 right-4">03</span>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">3. ชำระส่วนที่เหลือ 60%</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">เมื่อรับชิ้นงานครั้งแรกเรียบร้อย ชำระส่วนที่เหลือ 60% เพื่อติดตั้งฉบับสมบูรณ์</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl relative">
+                    <span class="text-3xl font-extrabold text-slate-300 absolute top-4 right-4">04</span>
+                    <h3 class="text-base font-bold text-slate-900 mb-2">4. รับประกันงาน 15 วัน</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">ดูแลแก้ไขบั๊กฟรี 15 วันแรก หลังพ้นประกัน คิดค่าบริการเพียงจุดละ 100 บาท</p>
+                </div>
+            </div>
+
+            <!-- Money-back Guarantee Box -->
+            <div class="bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-slate-50 border border-amber-300/80 p-6 rounded-3xl max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-5">
+                <div class="w-14 h-14 rounded-2xl bg-amber-500 flex items-center justify-center text-slate-900 text-2xl shrink-0 shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="space-y-1 text-center md:text-left">
+                    <h3 class="text-base font-bold text-slate-900">🛡️ เงื่อนไขการรับประกันและการคืนเงิน (Guarantee Policy)</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        • ส่งงานครั้งแรกแล้ว <strong class="text-slate-900">หากไม่โอเคหรือปฏิเสธงานจ้าง ยินดีคืนเงิน 20%</strong> ของค่างานทั้งหมด<br/>
+                        • **รับประกันงานฟรี 15 วัน** (แก้ไขบั๊กและปรับแต่งตามโจทย์เดิมฟรี)<br/>
+                        • เมื่อพ้นระยะประกัน 15 วัน หากต้องการแก้ไขเล็กๆ น้อยๆ คิดเพียง **จุดละ 100 บาท**
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">Transparent Pricing</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">แพ็กเกจค่าบริการ & ระยะเวลาจัดทำ</h2>
+                <p class="text-slate-600 text-sm">ราคาโปร่งใส ชำระครั้งเดียวจบ ไม่มีค่าบริการรายเดือน</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Starter Package -->
+                <div class="bg-white border border-slate-200 p-6 rounded-3xl flex flex-col justify-between shadow-sm hover:shadow-lg transition">
+                    <div>
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">Starter</span>
+                        <div class="text-3xl font-extrabold text-slate-900 mb-1">฿1,500</div>
+                        
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200 mb-4">
+                            ⏱️ จัดทำ 4 - 7 วัน
+                        </span>
+
+                        <p class="text-slate-600 text-xs mb-6">ระบบแจ้งเตือนทางเดียวขั้นพื้นฐาน</p>
+                        <ul class="text-xs text-slate-600 space-y-2.5 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> Google Sheet Trigger แจ้งเตือน</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> ส่งเข้า LINE Notify หรือ Telegram</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> แจ้งเตือนเมื่อกรอกฟอร์ม/ข้อมูล</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs text-center hover:bg-slate-800 transition">เลือกแพ็กเกจนี้</a>
+                </div>
+
+                <!-- Standard Package -->
+                <div class="bg-white border border-slate-200 p-6 rounded-3xl flex flex-col justify-between shadow-sm hover:shadow-lg transition">
+                    <div>
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">Standard</span>
+                        <div class="text-3xl font-extrabold text-slate-900 mb-1">฿3,000</div>
+                        
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200 mb-4">
+                            ⏱️ จัดทำ 4 - 7 วัน
+                        </span>
+
+                        <p class="text-slate-600 text-xs mb-6">ระบบตั้งเวลาและสรุปรายงานประจำวัน</p>
+                        <ul class="text-xs text-slate-600 space-y-2.5 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> รวมฟีเจอร์แพ็กเกจ Starter</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> ตั้งเวลาส่งสรุปรายงานประจำวัน</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> เช็กสถานะวันหมดอายุ/งานค้าง</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs text-center hover:bg-slate-800 transition">เลือกแพ็กเกจนี้</a>
+                </div>
+
+                <!-- Pro Interactive Package -->
+                <div class="bg-white border-2 border-amber-500 p-6 rounded-3xl flex flex-col justify-between relative shadow-xl">
+                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-amber-500 text-slate-900 font-extrabold text-[10px] rounded-full uppercase tracking-wider shadow-sm">
+                        ⭐ ยอดนิยม
+                    </span>
+                    <div>
+                        <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider block mb-1">Pro Interactive</span>
+                        <div class="text-3xl font-extrabold text-slate-900 mb-1">฿4,500</div>
+                        
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-medium bg-amber-50 text-amber-800 border border-amber-200 mb-4">
+                            ⏱️ จัดทำ 15 - 30 วัน
+                        </span>
+
+                        <p class="text-slate-600 text-xs mb-6">ระบบบอทโต้ตอบ 2 ทางแบบ Interactive</p>
+                        <ul class="text-xs text-slate-600 space-y-2.5 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> LINE Flex Message / Telegram Bot</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> พิมพ์โต้ตอบค้นหาข้อมูลใน Sheet</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> บันทึกข้อมูลกลับเข้า Sheet ผ่านแชท</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-xl bg-amber-500 text-slate-900 font-bold text-xs text-center hover:bg-amber-400 transition shadow-md shadow-amber-500/20">เลือกแพ็กเกจนี้</a>
+                </div>
+
+                <!-- Ultimate Package -->
+                <div class="bg-white border border-slate-200 p-6 rounded-3xl flex flex-col justify-between shadow-sm hover:shadow-lg transition">
+                    <div>
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">Ultimate Drive</span>
+                        <div class="text-3xl font-extrabold text-slate-900 mb-1">฿5,000</div>
+                        
+                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200 mb-4">
+                            ⏱️ จัดทำ 15 - 30 วัน
+                        </span>
+
+                        <p class="text-slate-600 text-xs mb-6">ระบบอัตโนมัติขั้นสูง + Google Drive Management</p>
+                        <ul class="text-xs text-slate-600 space-y-2.5 mb-6">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> รวมฟีเจอร์บอทโต้ตอบ 2 ทาง</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> อัปโหลดรูป/ไฟล์เก็บลง Google Drive</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-2"></i> จัดโครงสร้าง Folder + สร้างเอกสาร PDF</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs text-center hover:bg-slate-800 transition">เลือกแพ็กเกจนี้</a>
+                </div>
+            </div>
+            
+            <p class="text-center text-xs text-slate-500 mt-6">
+                * หมายเหตุ: หากต้องการระบบ AI & OCR สแกนสลิปโอนเงินเฉพาะทาง สามารถแจ้งเพิ่มเติมได้ (อาจมีค่า API/Server เพิ่มเติมตามปริมาณการใช้งานจริง)
+            </p>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">Got Questions?</span>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">คำถามที่พบบ่อย (FAQ)</h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-6 group [&_summary::-webkit-details-marker]:hidden shadow-xs cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-900">
+                        <span>ระบบเหล่านี้มีค่าบริการรายเดือนหรือไม่?</span>
+                        <span class="transition duration-300 group-open:rotate-180 text-amber-500"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-4 leading-relaxed">
+                        <strong>ไม่มีครับ!</strong> ระบบ Google Apps Script รันอยู่บนโครงสร้างพื้นฐานของ Google Workspace / Gmail ของคุณลูกค้าเองโดยตรง จึงไม่มีค่าเซิร์ฟเวอร์รายเดือน ชำระค่าพัฒนาระบบครั้งเดียวจบครับ (ยกเว้นกรณีพิเศษ เช่น ระบบ AI & OCR สแกนสลิปที่มีการใช้ API ภายนอก)
+                    </p>
+                </details>
+
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-6 group [&_summary::-webkit-details-marker]:hidden shadow-xs cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-900">
+                        <span>ทำไมแพ็กเกจ Pro และ Ultimate ถึงใช้เวลาจัดทำ 15-30 วัน?</span>
+                        <span class="transition duration-300 group-open:rotate-180 text-amber-500"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-4 leading-relaxed">
+                        เนื่องจากผู้จัดทำรับงานเป็น Freelance Specialist และแพ็กเกจระดับนี้มีการเชื่อมต่อระบบซับซ้อน เช่น บอทโต้ตอบแบบ Interactive 2 ทาง และการจัดการโครงสร้าง Google Drive จึงต้องใช้เวลาทดสอบระบบอย่างละเอียดเพื่อให้มั่นใจว่าจะเสถียรและไร้ข้อผิดพลาดเมื่อใช้งานจริงครับ
+                    </p>
+                </details>
+
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-6 group [&_summary::-webkit-details-marker]:hidden shadow-xs cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-900">
+                        <span>หากส่งงานครั้งแรกแล้วไม่พอใจ มีเงื่อนไขการคืนเงินอย่างไร?</span>
+                        <span class="transition duration-300 group-open:rotate-180 text-amber-500"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-4 leading-relaxed">
+                        เมื่อส่งชิ้นงานครั้งแรกแล้ว หากลูกค้าไม่โอเคหรือไม่ตรงตามโจทย์ ยินดีคืนเงินมัดจำให้ 20% ของค่างานทั้งหมดครับ แต่หากตกลงรับงานต่อ ชำระส่วนที่เหลือจนครบ 100% ครับ
+                    </p>
+                </details>
+
+                <details class="bg-slate-50 border border-slate-200 rounded-2xl p-6 group [&_summary::-webkit-details-marker]:hidden shadow-xs cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-slate-900">
+                        <span>เงื่อนไขประกันงาน 15 วันฟรี นับอย่างไร?</span>
+                        <span class="transition duration-300 group-open:rotate-180 text-amber-500"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-slate-600 text-xs sm:text-sm mt-4 leading-relaxed">
+                        นับตั้งแต่วันที่ส่งมอบงานฉบับสมบูรณ์ สามารถแจ้งปรับแก้ไขหรือแก้ไขบั๊กได้ฟรีตลอด 15 วันเต็ม หลังจากพ้น 15 วัน หากต้องการแก้ไขเพิ่มเติม จะคิดค่าบริการเพียงจุดละ 100 บาทเท่านั้นครับ
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-10">
+            <span class="text-xs font-bold text-amber-600 uppercase tracking-wider block mb-1">Get In Touch</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-3">ส่งรายละเอียดโจทย์งาน & ประเมินระบบฟรี</h2>
+            <p class="text-slate-600 text-sm">เลือกรายการที่เตรียมไว้ หรือพิมพ์สรุปสั้นๆ เพื่อให้เราประเมินระบบได้ทันทีครับ</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 p-6 sm:p-10 rounded-3xl text-left shadow-xl">
+            <form id="contact-form" class="space-y-6">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1.5">ชื่อผู้ติดต่อ / ชื่อร้านค้า *</label>
+                    <input type="text" id="sender-name" required placeholder="คุณสมชาย" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-amber-500 focus:bg-white transition"/>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1.5">เลือกแพ็กเกจบริการสนใจ</label>
+                    <select id="service-type" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-amber-500 focus:bg-white transition">
+                        <option value="1500">Starter - แจ้งเตือนทางเดียว (฿1,500 | 4-7 วัน)</option>
+                        <option value="3000">Standard - สรุปรายงานประจำวัน (฿3,000 | 4-7 วัน)</option>
+                        <option value="4500" selected>Pro - บอทโต้ตอบ Interactive (฿4,500 | 15-30 วัน)</option>
+                        <option value="5000">Ultimate - บอทโต้ตอบ + Drive Automation (฿5,000 | 15-30 วัน)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-2">สิ่งที่เตรียมไว้แล้ว (คลิกเลือกรายการ)</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                        <label class="flex items-center gap-2 p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-100 transition">
+                            <input type="checkbox" name="prepared-items" value="Google Sheet" class="rounded text-amber-500 focus:ring-amber-500">
+                            <span>📊 Google Sheet</span>
+                        </label>
+                        <label class="flex items-center gap-2 p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-100 transition">
+                            <input type="checkbox" name="prepared-items" value="LINE Notify / OA" class="rounded text-amber-500 focus:ring-amber-500">
+                            <span>💬 LINE Notify / OA</span>
+                        </label>
+                        <label class="flex items-center gap-2 p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-100 transition">
+                            <input type="checkbox" name="prepared-items" value="Telegram Bot" class="rounded text-amber-500 focus:ring-amber-500">
+                            <span>✈️ Telegram Bot</span>
+                        </label>
+                        <label class="flex items-center gap-2 p-3 bg-slate-50 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-100 transition">
+                            <input type="checkbox" name="prepared-items" value="Google Drive Folder" class="rounded text-amber-500 focus:ring-amber-500">
+                            <span>📁 Google Drive</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1.5">รายละเอียดโจทย์งานสั้นๆ *</label>
+                    <textarea id="project-details" rows="3" required placeholder="เช่น ต้องการดึงข้อมูลออเดอร์ใน Sheet ส่งแจ้งเตือน Flex Message เข้าไลน์กลุ่มเวลา 18:00 น. ทุกวัน..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-amber-500 focus:bg-white transition"></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl bg-amber-500 text-slate-900 font-bold hover:bg-amber-400 active:scale-98 transition shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2 text-sm sm:text-base">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>ส่งข้อมูลเพื่อประเมินระบบ</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Custom Modal Dialog (Replaces Alert) -->
+    <div id="custom-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl border border-slate-100 space-y-4">
+            <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900" id="modal-title">ส่งข้อมูลเรียบร้อยแล้ว!</h3>
+            <p class="text-xs text-slate-600 leading-relaxed" id="modal-message">ขอบคุณครับ เราจะติดต่อกลับทางช่องทางที่คุณระบุโดยเร็วที่สุด</p>
+            <button id="modal-close-btn" class="w-full py-3 bg-slate-900 text-white font-bold rounded-xl text-xs hover:bg-slate-800 transition">
+                ตกลง
+            </button>
+        </div>
+    </div>
+
+    <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 ระบบอัตโนมัติ เพื่อธุรกิจคุณ — ผู้เชี่ยวชาญ Google Apps Script และ Workflow</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating Mobile Quick Contact Bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-t border-slate-200 p-3 flex md:hidden items-center justify-between gap-3 shadow-lg">
+        <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="text-xs font-bold text-slate-800">พร้อมประเมินโจทย์ฟรี</span>
+        </div>
+        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-amber-500 text-slate-900 font-bold text-xs shadow-md shadow-amber-500/20 flex items-center gap-1.5">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>ส่งโจทย์งาน</span>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu drawer toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // ROI Calculator Logic
+        const hoursSlider = document.getElementById('hours-slider');
+        const staffSlider = document.getElementById('staff-slider');
+        const wageSlider = document.getElementById('wage-slider');
+
+        const hoursVal = document.getElementById('hours-val');
+        const staffVal = document.getElementById('staff-val');
+        const wageVal = document.getElementById('wage-val');
+
+        const savedHours = document.getElementById('saved-hours');
+        const savedMoney = document.getElementById('saved-money');
+
+        function updateROICalculations() {
+            const h = parseFloat(hoursSlider.value);
+            const s = parseInt(staffSlider.value);
+            const w = parseInt(wageSlider.value);
+
+            hoursVal.innerText = `${h} ชั่วโมง`;
+            staffVal.innerText = `${s} คน`;
+            wageVal.innerText = `${w} บาท`;
+
+            // Working days per month ~ 22 days
+            const totalHoursSavedMonthly = Math.round(h * s * 22);
+            const totalMoneySavedMonthly = Math.round(totalHoursSavedMonthly * w);
+
+            savedHours.innerText = `${totalHoursSavedMonthly.toLocaleString()} ชั่วโมง/เดือน`;
+            savedMoney.innerText = `฿${totalMoneySavedMonthly.toLocaleString()} /เดือน`;
+        }
+
+        hoursSlider.addEventListener('input', updateROICalculations);
+        staffSlider.addEventListener('input', updateROICalculations);
+        wageSlider.addEventListener('input', updateROICalculations);
+        updateROICalculations();
+
+        // Card Simulator Live Updates
+        const simCustomer = document.getElementById('sim-customer');
+        const simAmount = document.getElementById('sim-amount');
+        const simStatus = document.getElementById('sim-status');
+        const simNote = document.getElementById('sim-note');
+
+        const previewLineCustomer = document.getElementById('preview-line-customer');
+        const previewLineAmount = document.getElementById('preview-line-amount');
+        const previewLineStatus = document.getElementById('preview-line-status');
+        const previewLineNote = document.getElementById('preview-line-note');
+
+        const previewTgCustomer = document.getElementById('preview-tg-customer');
+        const previewTgAmount = document.getElementById('preview-tg-amount');
+        const previewTgStatus = document.getElementById('preview-tg-status');
+        const previewTgNote = document.getElementById('preview-tg-note');
+
+        function updateCardSimulator() {
+            const customer = simCustomer.value || 'คุณสมชาย ใจดี';
+            const amount = simAmount.value || '0';
+            const status = simStatus.value;
+            const note = simNote.value || '-';
+
+            // Update LINE Flex preview
+            previewLineCustomer.innerText = customer;
+            previewLineAmount.innerText = `฿${amount}`;
+            previewLineStatus.innerText = status;
+            previewLineNote.innerText = note;
+
+            // Update Telegram Bot preview
+            previewTgCustomer.innerText = customer;
+            previewTgAmount.innerText = `฿${amount}`;
+            previewTgStatus.innerText = status;
+            previewTgNote.innerText = note;
+        }
+
+        [simCustomer, simAmount, simStatus, simNote].forEach(el => {
+            el.addEventListener('input', updateCardSimulator);
+            el.addEventListener('change', updateCardSimulator);
+        });
+
+        // Simulator Platform View Toggle
+        const toggleLineBtn = document.getElementById('toggle-line-btn');
+        const toggleTgBtn = document.getElementById('toggle-tg-btn');
+        const lineView = document.getElementById('line-view');
+        const tgView = document.getElementById('tg-view');
+
+        toggleLineBtn.addEventListener('click', () => {
+            lineView.classList.remove('hidden');
+            tgView.classList.add('hidden');
+            toggleLineBtn.className = 'flex-1 py-2 px-3 rounded-xl bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm';
+            toggleTgBtn.className = 'flex-1 py-2 px-3 rounded-xl bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-slate-300 transition';
+        });
+
+        toggleTgBtn.addEventListener('click', () => {
+            tgView.classList.remove('hidden');
+            lineView.classList.add('hidden');
+            toggleTgBtn.className = 'flex-1 py-2 px-3 rounded-xl bg-telegram text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm';
+            toggleLineBtn.className = 'flex-1 py-2 px-3 rounded-xl bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-slate-300 transition';
+        });
+
+        // Modal Dialog Handler
+        const customModal = document.getElementById('custom-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+
+        function showCustomModal(title, msg) {
+            modalTitle.innerText = title;
+            modalMessage.innerText = msg;
+            customModal.classList.remove('hidden');
+        }
+
+        modalCloseBtn.addEventListener('click', () => {
+            customModal.classList.add('hidden');
+        });
+
+        // Contact Form Submission Handler with Direct Telegram Bot API Integration
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> <span>กำลังส่งข้อมูล...</span>`;
+
+            // Get Form Data
+            const escapeTelegramHtml = (value) => String(value)
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;');
+
+            const name = document.getElementById('sender-name').value.trim();
+            const serviceSelect = document.getElementById('service-type');
+            const selectedServiceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+
+            const preparedItems = Array.from(document.querySelectorAll('input[name="prepared-items"]:checked'))
+                                       .map(cb => cb.value)
+                                       .join(', ') || 'ไม่ได้ระบุ';
+
+            const projectDetails = document.getElementById('project-details').value;
+
+            // Telegram API Configs
+            const telegramBotToken = "8242245336:AAE8mJS0Ao936II_p8fOWV2enT54AP878PA";
+            const chatId = "-1003939419044";
+
+            const now = new Date().toLocaleString('th-TH');
+
+            // Format Telegram HTML Message
+            const messageText = `📩 <b>มีรายการขอประเมินระบบใหม่!</b>\n\n` +
+                                `👤 <b>ชื่อผู้ติดต่อ:</b> ${escapeTelegramHtml(name)}\n` +
+                                `📦 <b>แพ็กเกจที่สนใจ:</b> ${escapeTelegramHtml(selectedServiceText)}\n` +
+                                `📋 <b>สิ่งที่เตรียมไว้แล้ว:</b> ${escapeTelegramHtml(preparedItems)}\n` +
+                                `📝 <b>รายละเอียดโจทย์งาน:</b>\n${escapeTelegramHtml(projectDetails)}\n\n` +
+                                `⏰ <b>เวลาที่ส่ง:</b> ${now}`;
+
+            try {
+                // Send request directly to Telegram Bot API
+                const response = await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: messageText,
+                        parse_mode: 'HTML'
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.ok) {
+                    showCustomModal(
+                        `ขอบคุณครับคุณ ${name}!`,
+                        `ส่งข้อมูลไปยัง Telegram เรียบร้อยแล้ว เราจะติดต่อกลับโดยเร็วที่สุดครับ`
+                    );
+                    contactForm.reset();
+                } else {
+                    let errorMsg = data.description || 'โปรดลองอีกครั้ง';
+                    if (data.description && data.description.includes('chat not found')) {
+                        errorMsg = `ไม่พบห้องแชท Telegram (Chat ID: ${chatId})\n\nวิธีแก้ไข:\n1. ดึงบอทเข้ากลุ่ม/แชนเนล Telegram\n2. ตั้งให้บอทมีสิทธิ์ส่งข้อความ (หรือตั้งเป็น Admin)\n3. พิมพ์ข้อความในกลุ่ม 1 ครั้ง แล้วเช็ก Chat ID ที่ถูกต้องผ่าน getUpdates`;
+                    }
+                    showCustomModal(
+                        `เกิดข้อผิดพลาดจาก Telegram`,
+                        errorMsg
+                    );
+                }
+            } catch (err) {
+                console.error(err);
+                showCustomModal(
+                    `เกิดข้อผิดพลาดในการเชื่อมต่อ`,
+                    `ไม่สามารถส่งข้อมูลได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ต`
+                );
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                submitBtn.innerHTML = `<i class="fa-solid fa-paper-plane"></i> <span>ส่งข้อมูลเพื่อประเมินระบบ</span>`;
+            }
+        });
+    </script>
+</body>
+</html>
